@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>PictoHub</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="main-content">
+                <div class="header">
+                    <div class="logo">
+                        <a href="/index.html"><img src="/img/logo.png" alt="Instagram Logo"></a>
+                    </div>
+                </div>
+
+                <div class="profile__header">
+                    <div>
+                        <img src="/img/user_photo.jpg">
+                        <h2>Videograph</h2>
+                    </div>
+                    <button class="edit" data-modal-open>
+                        <svg>
+                            <use href="/img/icons.svg#edit"></use>
+                        </svg>
+                        Редагувати
+                    </button>
+                    <div class="backdrop is-hidden" data-modal>
+                        <div class="modal__edit">
+                            <div class="user__photo">
+                                <img src="/img/user_photo.jpg">
+                                <button class="select_photo">Вибрати файл</button>
+                            </div>
+
+                            <div class="form__nickname">
+                                <label for="name">Ім'я</label>
+                                <input type="text" name="name" id="name" class="form__input" placeholder="Videograph"/>
+                            </div>
+                    
+                            <div class="modal__buttons">
+                                <button class="cancel" data-modal-close>Закрити</button>
+                                <div class="vert__line"></div>
+                                <button class="save">Зберегти</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="create__post" data-modal-open>
+                        <svg>
+                            <use href="/img/icons.svg#plus"></use>
+                        </svg>
+                        Створити
+                    </button>
+
+                    <div class="backdrop is-hidden" data-modal>
+                        <div class="modal__edit">
+                            <div class="select__file">
+                                <button class="btn__select_file">Вибрати файл</button>
+                            </div>
+                    
+                            <div class="form__nickname">
+                                <label for="name">Опис</label>
+                                <textarea type="text" name="description" id="description" class="form__textarea" placeholder="Enter text..." ></textarea>
+                            </div>
+                    
+                            <div class="modal__buttons">
+                                <button class="cancel" data-modal-close>Відмітини</button>
+                                <div class="vert__line"></div>
+                                <button class="save">Створити</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="line"></div>
+
+
+                <ul class="profile__posts">
+                    <li class="profile__post">
+                        <a data-modal-open>
+                            <div class="post-content">
+                                <img src="/img/123.jpg" sizes="350px">
+                                <div class="overlay">
+                                    <div>
+                                        <svg class="icon">
+                                            <use href="/img/icons.svg#star1"></use>
+                                        </svg>
+                                        <p class="overlay__description">4.5</p>
+                                    </div>
+                                    <div>
+                                        <svg class="icon">
+                                            <use href="/img/icons.svg#coments"></use>
+                                        </svg>
+                                        <p class="overlay__description">35</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="post__backdrop is-hidden" data-modal>
+                            <div class="post__modal">
+                                <img src="/img/123.jpg" sizes="350px">
+                                <div class="post__block">
+                                    <div class="post__header">
+                                        <div>
+                                            <img src="/img/user_photo.jpg"></img>
+                                            <h4>Videograph</h4>
+                                        </div>
+
+                                        <button class="post__btn__more" data-modal-open-modal>
+                                            <svg class="icon__dots">
+                                                <use href="/img/icons.svg#dots"></use>
+                                            </svg>
+                                        </button>
+                                        
+                                        <div class="backdrop is-hidden" data-modal-modal>
+                                            <div class="modal">
+                                                <button class="btn__action">Поскаржитися</button>
+                                                <button class="btn__action">Створити QR-code</button>
+                                                <button class="btn__action">Редагувати</button>
+                                                <button class="btn__action">Видалити</button>
+                                        
+                                                <button class="modal__button-close" data-modal-close-modal>Закрити</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="section__coments">
+                                        <div class="coment">
+                                            <img src="/img/marvel.jpg"></use>
+                                            <div>
+                                                <div>
+                                                    <h5>Marvel</h5>
+                                                    <p>Nice photo</p>
+                                                </div>
+                                                <p class="coment__time">1 год назад</p>
+                                            </div>
+                                        </div>
+                                        <div class="coment">
+                                            <img src="/img/007.jpg"></use>
+                                            <div>
+                                                <div>
+                                                    <h5>007</h5>
+                                                    <p>Like it</p>
+                                                </div>
+                                                <p class="coment__time">3 год назад</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="user__description">
+                                        <div class="div_description">
+                                            <div class="user-actions">
+                                                <ul class="list_of_stars">
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="description">
+                                                <p class="description__text">
+                                                    <a href="">#dji</a>
+                                                    <a href="">#djiglobal</a>
+                                                    <a href="">#djimavic3</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="coment__area">
+                                            <textarea type="text" name="coment" id="coment" class="coment__textarea" placeholder="Enter text..." ></textarea>
+                                            <button>Відправити</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="div__button__close">
+                                <button class="post__modal__button-close" data-modal-close>
+                                    <svg>
+                                        <use href="/img/icons.svg#close"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="profile__post">
+                        <a data-modal-open="">
+                            <div class="post-content">
+                                <img src="/img/photo1.jpg" sizes="350px">
+                                <div class="overlay">
+                                    <div>
+                                        <svg class="icon">
+                                            <use href="/img/icons.svg#star1"></use>
+                                        </svg>
+                                        <p class="overlay__description">4.0</p>
+                                    </div>
+                                    <div>
+                                        <svg class="icon">
+                                            <use href="/img/icons.svg#coments"></use>
+                                        </svg>
+                                        <p class="overlay__description">20</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="post__backdrop is-hidden" data-modal>
+                            <div class="post__modal">
+                                <img src="/img/photo1.jpg" sizes="350px">
+                                <div class="post__block">
+                                    <div class="post__header">
+                                        <div>
+                                            <img src="/img/user_photo.jpg"></img>
+                                            <h4>Videograph</h4>
+                                        </div>
+                        
+                                        <button class="post__btn__more" data-modal-open-modal>
+                                            <svg class="icon__dots">
+                                                <use href="/img/icons.svg#dots"></use>
+                                            </svg>
+                                        </button>
+                        
+                                        <div class="backdrop is-hidden" data-modal-modal>
+                                            <div class="modal">
+                                                <button class="btn__action">Поскаржитися</button>
+                                                <button class="btn__action">Створити QR-code</button>
+                                                <button class="btn__action">Редагувати</button>
+                                                <button class="btn__action">Видалити</button>
+                        
+                                                <button class="modal__button-close" data-modal-close-modal>Закрити</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="section__coments">
+                                        <div class="coment">
+                                            <img src="/img/marvel.jpg"></use>
+                                            <div>
+                                                <div>
+                                                    <h5>Marvel</h5>
+                                                    <p>Nice photo</p>
+                                                </div>
+                                                <p class="coment__time">1 год назад</p>
+                                            </div>
+                                        </div>
+                                        <div class="coment">
+                                            <img src="/img/007.jpg"></use>
+                                            <div>
+                                                <div>
+                                                    <h5>007</h5>
+                                                    <p>Like it</p>
+                                                </div>
+                                                <p class="coment__time">3 год назад</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="user__description">
+                                        <div class="div_description">
+                                            <div class="user-actions">
+                                                <ul class="list_of_stars">
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="description">
+                                                <p class="description__text">
+                                                    <a href="">#dji</a>
+                                                    <a href="">#djiglobal</a>
+                                                    <a href="">#djimavic3</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="coment__area">
+                                            <textarea type="text" name="coment" id="coment" class="coment__textarea"
+                                                placeholder="Enter text..."></textarea>
+                                            <button>Відправити</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="div__button__close">
+                                <button class="post__modal__button-close" data-modal-close>
+                                    <svg>
+                                        <use href="/img/icons.svg#close"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="profile__post">
+                        <a data-modal-open="">
+                            <div class="post-content">
+                                <img src="/img/photo2.jpg" sizes="350px">
+                                <div class="overlay">
+                                    <div>
+                                        <svg class="icon">
+                                            <use href="/img/icons.svg#star1"></use>
+                                        </svg>
+                                        <p class="overlay__description">5</p>
+                                    </div>
+                                    <div>
+                                        <svg class="icon">
+                                            <use href="/img/icons.svg#coments"></use>
+                                        </svg>
+                                        <p class="overlay__description">55</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="post__backdrop is-hidden" data-modal>
+                            <div class="post__modal">
+                                <img src="/img/photo2.jpg" sizes="350px">
+                                <div class="post__block">
+                                    <div class="post__header">
+                                        <div>
+                                            <img src="/img/user_photo.jpg"></img>
+                                            <h4>Videograph</h4>
+                                        </div>
+                        
+                                        <button class="post__btn__more" data-modal-open-modal>
+                                            <svg class="icon__dots">
+                                                <use href="/img/icons.svg#dots"></use>
+                                            </svg>
+                                        </button>
+                        
+                                        <div class="backdrop is-hidden" data-modal-modal>
+                                            <div class="modal">
+                                                <button class="btn__action">Поскаржитися</button>
+                                                <button class="btn__action">Створити QR-code</button>
+                                                <button class="btn__action">Редагувати</button>
+                                                <button class="btn__action">Видалити</button>
+                        
+                                                <button class="modal__button-close" data-modal-close-modal>Закрити</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="section__coments">
+                                        <div class="coment">
+                                            <img src="/img/marvel.jpg"></use>
+                                            <div>
+                                                <div>
+                                                    <h5>Marvel</h5>
+                                                    <p>Nice photo</p>
+                                                </div>
+                                                <p class="coment__time">1 год назад</p>
+                                            </div>
+                                        </div>
+                                        <div class="coment">
+                                            <img src="/img/007.jpg"></use>
+                                            <div>
+                                                <div>
+                                                    <h5>007</h5>
+                                                    <p>Like it</p>
+                                                </div>
+                                                <p class="coment__time">3 год назад</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="user__description">
+                                        <div class="div_description">
+                                            <div class="user-actions">
+                                                <ul class="list_of_stars">
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button>
+                                                            <svg class="icon__star">
+                                                                <use href="/img/icons.svg#star1"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="description">
+                                                <p class="description__text">
+                                                    <a href="">#dji</a>
+                                                    <a href="">#djiglobal</a>
+                                                    <a href="">#djimavic3</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="coment__area">
+                                            <textarea type="text" name="coment" id="coment" class="coment__textarea"
+                                                placeholder="Enter text..."></textarea>
+                                            <button>Відправити</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="div__button__close">
+                                <button class="post__modal__button-close" data-modal-close>
+                                    <svg>
+                                        <use href="/img/icons.svg#close"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="sidebar">
+                <ul class="navigation">
+                    <li>
+                        <a href="/profile.html">
+                            <svg class="icons__from__nav">
+                                <use href="/img/icons.svg#person"></use>
+                            </svg>
+                            Профіль
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-modal-open>
+                            <svg class="icons__from__nav">
+                                <use href="/img/icons.svg#bell"></use>
+                            </svg>
+                            Сповіщення
+                        </a>
+                        <div class="notification__backdrop is-hidden" data-modal>
+                            <div class="notification__modal">
+                                <div class="notification__sidebar">
+                                    <h1>Сповіщення</h1>
+                                    <ul class="notification__list">
+                                        <li>
+                                            <p>
+                                                <span>Marvel</span>
+                                                оцінив Вашу публікацію на 5
+                                                <svg class="icon__star__notification">
+                                                    <use href="/img/icons.svg#star1"></use>
+                                                </svg>
+                                            </p>
+                                            <img src="/img/photo1.jpg">
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <span>007</span>
+                                                оцінив Вашу публікацію на 5
+                                                <svg class="icon__star__notification">
+                                                    <use href="/img/icons.svg#star1"></use>
+                                                </svg>
+                                            </p>
+                                            <img src="/img/photo2.jpg">
+                                        </li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="notification__button-close" data-modal-close></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg class="icons__from__nav">
+                                <use href="/img/icons.svg#settings"></use>
+                            </svg>
+                            Налаштування
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg class="icons__from__nav">
+                                <use href="/img/icons.svg#exit"></use>
+                            </svg>
+                            Вихід
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="/js/modal.js"></script>
+        <script src="/js/modal_1.js"></script>
+        <script src="/js/mobile-menu.js"></script>
+    </body>
+</html>
